@@ -30,7 +30,7 @@ class SolverTest extends TestCase
     }
 
     /**
-     * @dataProvider lcsProvider
+     * @dataProvider lcsOrderMattersProvider
      *
      * @param array $sequenceLeft
      * @param array $sequenceRight
@@ -153,7 +153,7 @@ class SolverTest extends TestCase
             'Order change Changed -> Natural' => [
                 ['A', 'B', 'C', 'D', 'E', 'F'],
                 ['A', 'B', 'D', 'C', 'E', 'F'],
-                ['A', 'B', 'C', 'E', 'F'],
+                ['A', 'B', 'D', 'E', 'F'],
             ],
         ];
     }
