@@ -34,5 +34,6 @@ We do not give estimated times for completion on `Accepted` Proposals.
 [Accepted]: https://github.com/Triun/PHP-Longest-Common-Subsequence/labels/Accepted
 [Rejected]: https://github.com/Triun/PHP-Longest-Common-Subsequence/labels/Rejected
 
-[Unreleased]: https://github.com/Triun/PHP-Longest-Common-Subsequence/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/Triun/PHP-Longest-Common-Subsequence/compare/v1.1.0...HEAD
+[v1.1.0]: https://github.com/Triun/PHP-Longest-Common-Subsequence/compare/v1.0.0...v1.1.0
 [v1.0.0]: https://github.com/Triun/PHP-Longest-Common-Subsequence/tree/v1.0.0
