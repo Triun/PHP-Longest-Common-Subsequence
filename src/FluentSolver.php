@@ -65,10 +65,12 @@ class FluentSolver extends Solver
      * @param int   $type
      * @param       $left
      * @param       $right
+     * @param int   $indexLeft
+     * @param int   $indexRight
      */
-    protected function aggregate(array &$result, int $type, $left, $right)
+    protected function aggregate(array &$result, int $type, $left, $right, int $indexLeft, int $indexRight)
     {
-        call_user_func_array($this->aggregator, [&$result, $type, $left, $right]);
+        call_user_func_array($this->aggregator, [&$result, $type, $left, $right, $indexLeft, $indexRight]);
     }
 
     /**
@@ -76,10 +78,12 @@ class FluentSolver extends Solver
      * @param int   $type
      * @param       $left
      * @param       $right
+     * @param int   $indexLeft
+     * @param int   $indexRight
      */
-    protected function defaultAggregator(array &$result, int $type, $left, $right)
+    protected function defaultAggregator(array &$result, int $type, $left, $right, int $indexLeft, int $indexRight)
     {
-        parent::aggregate($result, $type, $left, $right);
+        parent::aggregate($result, $type, $left, $right, $indexLeft,  $indexRight);
     }
 
     /**

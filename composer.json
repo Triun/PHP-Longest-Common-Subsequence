@@ -1,6 +1,6 @@
 {
     "name": "triun/longest-common-subsequence",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "description": "PHP implementation of an algorithm to solve the 'longest common subsequence' problem.",
     "license": "MIT",
     "type": "library",

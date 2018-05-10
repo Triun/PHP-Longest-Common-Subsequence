@@ -25,8 +25,10 @@ class Solver implements SolverInterface
      * @param int   $type
      * @param       $left
      * @param       $right
+     * @param int   $indexLeft
+     * @param int   $indexRight
      */
-    protected function aggregate(array &$result, int $type, $left, $right)
+    protected function aggregate(array &$result, int $type, $left, $right, int $indexLeft, int $indexRight)
     {
         if (static::EQUAL === $type) {
             $result[] = $left;
@@ -93,14 +95,14 @@ class Solver implements SolverInterface
         $result = [];
         while ($i < $m && $j < $n) {
             if ($this->compare($sequenceLeft[$i], $sequenceRight[$j])) {
-                $this->aggregate($result, static::EQUAL, $sequenceLeft[$i], $sequenceRight[$j]);
+                $this->aggregate($result, static::EQUAL, $sequenceLeft[$i], $sequenceRight[$j], $i, $j);
                 $i++;
                 $j++;
             } elseif ((isset($a[$i + 1][$j]) ? $a[$i + 1][$j] : 0) >= (isset($a[$i][$j + 1]) ? $a[$i][$j + 1] : 0)) {
-                $this->aggregate($result, static::LEFT, $sequenceLeft[$i], $sequenceRight[$j]);
+                $this->aggregate($result, static::LEFT, $sequenceLeft[$i], $sequenceRight[$j], $i, $j);
                 $i++;
             } else {
-                $this->aggregate($result, static::RIGHT, $sequenceLeft[$i], $sequenceRight[$j]);
+                $this->aggregate($result, static::RIGHT, $sequenceLeft[$i], $sequenceRight[$j], $i, $j);
                 $j++;
             }
         }
