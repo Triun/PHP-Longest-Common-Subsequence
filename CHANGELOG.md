@@ -20,7 +20,7 @@ We do not give estimated times for completion on `Accepted` Proposals.
 
 `Added`
 
-- `aggregate` method include the subsequence indexes.
+- `aggregate` method includes the subsequence indexes.
 
 ## [v1.0.0] - 2018-03-26
 
